@@ -25,12 +25,10 @@ button.addEventListener("click", () => {
         input.value = "";
         saveAndRender();
     }
-});
-
+});
 input.addEventListener("keydown", (e) => {
     if (e.key === "Enter") {
         button.click();
     }
-});
-
+});
 render();
