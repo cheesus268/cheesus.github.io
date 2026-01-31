@@ -1,4 +1,3 @@
-const originalHeight = window.visualViewport.height;
 let input = document.getElementById("input");
 let button = document.getElementById("add");
 let list = document.getElementById("items");
@@ -31,21 +30,6 @@ button.addEventListener("click", () => {
 input.addEventListener("keydown", (e) => {
     if (e.key === "Enter") {
         button.click();
-    }
-});
-
-input.addEventListener("focus", () => {
-    input.scrollIntoView({
-        behavior: "smooth",
-        block: "center"
-    });
-});
-
-window.visualViewport.addEventListener("resize", () => {
-    if (Math.abs(window.visualViewport.height - originalHeight) < 20) {
-        if (document.activeElement.tagName === "INPUT") {
-            document.activeElement.blur();
-        }
     }
 });
 
